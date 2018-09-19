@@ -5,7 +5,7 @@ import java.math.BigInteger;
 public class Account {
 	private BigInteger balance = BigInteger.ZERO;
 
-	public void deposit(int amount) {
+	public synchronized void deposit(int amount) {
 		balance = balance.add(BigInteger.valueOf(amount));
 	}
 
